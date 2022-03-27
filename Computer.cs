@@ -34,6 +34,7 @@ namespace RPS3
             {
                 Computerchoice = "Makas";
             }
+
             return Computerchoice;
         }
 

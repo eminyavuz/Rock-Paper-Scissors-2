@@ -17,12 +17,20 @@ namespace RPS3
         public bool Proceed()
         {
             //OYUNCUNUN DEVAM ETMEK İSTEYİP İSTEMEDİĞİNİ BELİRLEYECEK FONKSİYON
+            repeat:
             Console.WriteLine("Devam etmek istiyor musunuz? (Evet,Hayır)");
             proceed = Console.ReadLine();
             if (proceed.ToLower() == "evet") ;
             else if (proceed.ToLower() == "hayır")
             {
                 flag = false;
+            }
+            else
+            {
+                Console.WriteLine("Hatalı giriş yaptınız Lütfen tekrar deneyiniz.");
+                System.Threading.Thread.Sleep(3000);
+                Console.Clear();    
+                goto repeat;    
             }
             return flag;
 
@@ -122,7 +130,7 @@ namespace RPS3
                         scorehuman++;
                     }
                     break;
-
+                default: Console.WriteLine("Hatalı giriş yaptınız."); break;
             }
         }
     }

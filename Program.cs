@@ -21,6 +21,7 @@ namespace RPS3
                 Console.Clear();
 
 
+
             }
             while (player.flag);
             player.scoreboard();
